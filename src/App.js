@@ -214,8 +214,8 @@ export default function App() {
             <div>
               <FadeIn>
                 <EyR text="A Essência da Celebração" />
-                <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(30px,3.5vw,48px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.12, marginBottom: 6 }}>A festa mais importante</h2>
-                <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(30px,3.5vw,48px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--rose)', lineHeight: 1.12 }}>da vida dele até aqui.</h2>
+                <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(30px,3.5vw,48px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.12, marginBottom: 6 }}>A festa mais especial</h2>
+                <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(30px,3.5vw,48px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--rose)', lineHeight: 1.12 }}>da infância deles.</h2>
                 <RuleR />
               </FadeIn>
               <FadeIn delay={200}>
