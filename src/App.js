@@ -216,7 +216,7 @@ export default function App() {
             </h1>
           </FadeIn>
         </div>
-        <img src="/images/Logodark.svg" alt="Felicitá" className="hero-logo-overlay" />
+        
       </section>
 
       {/* S2 MANIFESTO */}
