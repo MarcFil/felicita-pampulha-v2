@@ -309,7 +309,7 @@ export default function App() {
                 <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,42px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--blue)', lineHeight: 1.12 }}>cada momento.</h2>
                 <div style={{ width: 56, height: 2, background: 'linear-gradient(90deg,var(--blue),transparent)', margin: '18px 0', borderRadius: 2 }} />
                 <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.9, marginTop: 16 }}>
-                  A Unidade Palmares foi concebida para ser o cenário perfeito de uma festa única. Cada elemento foi escolhido com um único critério: a excelência — inclusive para os pequenos.
+                  A Unidade Cidade Nova foi concebida para ser o cenário perfeito de uma festa única. Cada elemento foi escolhido com um único critério: a excelência — inclusive para os pequenos.
                 </p>
               </div>
             </FadeIn>
