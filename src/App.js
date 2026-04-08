@@ -316,7 +316,6 @@ export default function App() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
               {[
                 { t: 'Capacidade', v: '220', s: 'convidados' },
-                { t: 'Exclusividade', v: 'Sala VIP', s: 'para os anfitriões' },
                 { t: 'Conforto', v: 'Climatizado', s: 'todos os ambientes' },
                 { t: 'Arquitetura', v: '4m', s: 'de pé-direito' },
                 { t: 'Elegância', v: 'Lustres', s: 'de cristal' },
