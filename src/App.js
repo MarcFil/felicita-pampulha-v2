@@ -320,7 +320,7 @@ export default function App() {
           <FadeIn>
             <Orn />
             <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: isMobile ? 22 : 28, fontWeight: 300, color: 'rgba(255,255,255,.85)', marginBottom: 8 }}>o cenário perfeito para</p>
-            <h2 style={{ fontFamily: "'Nunito',sans-serif", fontSize: isMobile ? 32 : 'clamp(36px,5vw,64px)', fontWeight: 900, color: '#FFFFFF', lineHeight: 1.1 }}>Uma Noite Inesquecível em Pampulha</h2>
+            <h2 style={{ fontFamily: "'Nunito',sans-serif", fontSize: isMobile ? 32 : 'clamp(36px,5vw,64px)', fontWeight: 900, color: '#FFFFFF', lineHeight: 1.1 }}>Uma Noite Inesquecível na Pampulha</h2>
           </FadeIn>
         </div>
       </section>
