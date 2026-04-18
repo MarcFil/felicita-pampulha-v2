@@ -237,25 +237,23 @@ export default function App() {
           />
         </div>
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(170deg,rgba(10,10,10,.1) 0%,rgba(10,10,10,.4) 40%,rgba(10,10,10,.88) 75%,#0A0A0A 100%)' }} />
-        <div style={{ position: 'absolute', bottom: isMobile ? 60 : 90, left: isMobile ? 24 : 56, right: isMobile ? 24 : 56, zIndex: 2 }}>
-          <FadeIn>
-            <div style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: '.35em', textTransform: 'uppercase', color: 'var(--gold)', background: 'var(--gold10)', border: '1px solid var(--gold30)', padding: '5px 14px', borderRadius: 999, display: 'inline-block', marginBottom: 20 }}>Para: Adriana Oliveira Mendes · Espaço Felicitá</div>
-          </FadeIn>
+        <div style={{ position: 'absolute', bottom: isMobile ? 40 : 90, left: isMobile ? 24 : 56, right: isMobile ? 24 : 56, zIndex: 2 }}>
           <FadeIn delay={150}>
-            <h1 style={{ fontFamily: isMobile ? "'Nunito',sans-serif" : "'Playfair Display',serif", fontSize: isMobile ? 'clamp(36px,10vw,56px)' : 'clamp(48px,6vw,80px)', fontWeight: isMobile ? 900 : 700, color: '#fff', lineHeight: 1.05, marginBottom: 16, letterSpacing: isMobile ? '-.01em' : '-.02em' }}>
-              Uma noite que<br />
-              <span style={{ color: 'var(--gold)', fontStyle: isMobile ? 'normal' : 'italic' }}>nunca se esquece.</span>
+            <h1 style={{ fontFamily: isMobile ? "'Nunito',sans-serif" : "'Playfair Display',serif", fontSize: isMobile ? 'clamp(28px,8vw,42px)' : 'clamp(48px,6vw,80px)', fontWeight: isMobile ? 900 : 700, color: '#fff', lineHeight: 1.08, marginBottom: isMobile ? 10 : 16, letterSpacing: isMobile ? '-.01em' : '-.02em' }}>
+              Uma noite que <span style={{ color: 'var(--gold)', fontStyle: isMobile ? 'normal' : 'italic' }}>nunca se esquece.</span>
             </h1>
           </FadeIn>
-          <FadeIn delay={300}>
-            <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: isMobile ? 18 : 22, color: 'rgba(255,255,255,.6)', lineHeight: 1.7, maxWidth: 520 }}>
-              O Espaço Felicitá Pampulha — onde cada detalhe foi pensado para transformar a sua celebração em memória eterna.
-            </p>
-          </FadeIn>
+          {!isMobile && (
+            <FadeIn delay={300}>
+              <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: 22, color: 'rgba(255,255,255,.6)', lineHeight: 1.7, maxWidth: 520 }}>
+                O Espaço Felicitá Pampulha — onde cada detalhe foi pensado para transformar a sua celebração em memória eterna.
+              </p>
+            </FadeIn>
+          )}
           <FadeIn delay={450}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 32 }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: isMobile ? 14 : 32 }}>
               {['230 convidados', 'Buffet próprio', 'Ambientes exclusivos', 'Somente domingos'].map((pill, i) => (
-                <span key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,.5)', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.1)', padding: '6px 14px', borderRadius: 999, display: 'flex', alignItems: 'center', gap: 7 }}>
+                <span key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: isMobile ? 10 : 11, fontWeight: 600, color: 'rgba(255,255,255,.5)', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.1)', padding: isMobile ? '5px 10px' : '6px 14px', borderRadius: 999, display: 'flex', alignItems: 'center', gap: 6 }}>
                   <span style={{ width: 4, height: 4, borderRadius: '50%', background: i % 2 === 0 ? 'var(--gold)' : 'var(--rose)', flexShrink: 0 }} />
                   {pill}
                 </span>
@@ -393,9 +391,12 @@ export default function App() {
                   <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 14, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.8, marginBottom: 20 }}>
                     Espaço privativo com decoração refinada, iluminação especial e serviço dedicado — para quem deseja um momento à parte durante a celebração.
                   </p>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                     {['Acesso exclusivo', 'Decoração diferenciada', 'Serviço personalizado', 'Ambiente climatizado', 'Iluminação especial'].map((item, i) => (
-                      <span key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 500, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--gold)', background: 'var(--gold10)', border: '1px solid var(--gold30)', padding: '5px 14px', borderRadius: 999 }}>{item}</span>
+                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                        <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--gold)', flexShrink: 0 }} />
+                        <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 400, color: 'var(--txts)' }}>{item}</span>
+                      </div>
                     ))}
                   </div>
                 </div>
