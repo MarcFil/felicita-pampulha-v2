@@ -175,6 +175,38 @@ const AutoVideo = ({ src, style: s = {}, className = '', withAudio = false }) =>
   );
 };
 
+const TeamVideo = () => {
+  const [started, setStarted] = useState(false);
+  return (
+    <div style={{ position: 'relative', width: '100%', aspectRatio: '9/16', borderRadius: 4, overflow: 'hidden', background: '#000' }}>
+      {started ? (
+        <iframe
+          src="https://www.youtube.com/embed/5038gNSMQTg?autoplay=1&mute=0&playsinline=1&rel=0&controls=1"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
+        />
+      ) : (
+        <>
+          <img
+            src={`https://img.youtube.com/vi/5038gNSMQTg/hqdefault.jpg`}
+            alt="Equipe Felicitá"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+          <div
+            onClick={() => setStarted(true)}
+            style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.35)', cursor: 'pointer' }}
+          >
+            <div style={{ width: 72, height: 72, borderRadius: '50%', background: 'rgba(201,168,76,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 24px rgba(201,168,76,0.4)' }}>
+              <div style={{ width: 0, height: 0, borderTop: '14px solid transparent', borderBottom: '14px solid transparent', borderLeft: '22px solid #0A0A0A', marginLeft: 4 }} />
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
+
 const LogoLight = ({ height = 48 }) => (
   <img src="/images/Logo com letras branca correto.svg" alt="Espaço Felicitá" style={{ height, width: 'auto', display: 'block' }} />
 );
@@ -359,9 +391,7 @@ export default function App() {
               ))}
             </div>
             <FadeIn delay={200}>
-              <div style={{ position: 'relative', borderRadius: 4, overflow: 'hidden', width: '100%', height: isMobile ? 480 : 600 }}>
-                <AutoVideo src="/videos/team.mp4" withAudio style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-              </div>
+              <TeamVideo />
             </FadeIn>
           </div>
         </div>
@@ -682,19 +712,9 @@ export default function App() {
                 <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(26px,3vw,42px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.12, marginBottom: 6 }}>Buffet próprio,</h2>
                 <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(26px,3vw,42px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--rose)', lineHeight: 1.12 }}>sabor de verdade.</h2>
                 <RuleR />
-                <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.9, marginBottom: 24 }}>
+                <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.9, marginBottom: 32 }}>
                   Nosso buffet é inteiramente próprio — desenvolvido para atender todos os convidados com excelência, variedade e apresentação impecável.
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginTop: 8 }}>
-                  <div className="photo-frame" style={{ aspectRatio: '4/3' }}>
-                    <div className="photo-frame-border" />
-                    <img src="/images/buffet-1.jpg" alt="Buffet Felicitá" style={{ objectPosition: 'center center' }} />
-                  </div>
-                  <div className="photo-frame" style={{ aspectRatio: '4/3' }}>
-                    <div className="photo-frame-border" />
-                    <img src="/images/buffet-2.jpg" alt="Buffet Felicitá" style={{ objectPosition: 'center center' }} />
-                  </div>
-                </div>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
