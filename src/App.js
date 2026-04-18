@@ -370,7 +370,7 @@ export default function App() {
                 </p>
               </div>
             </FadeIn>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 12 }}>
               {[
                 { t: 'Capacidade', v: '230', s: 'convidados' },
                 { t: 'Exclusividade', v: 'Sala VIP', s: 'para os anfitriões' },
